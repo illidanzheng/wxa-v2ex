@@ -1,0 +1,20 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="topic-detail">
+  	<view class="topic-header-info">
+	    <view class="topic-owner-info">
+	      <image class="topic-owner-avatar" src="{{topicDetail.member.avatar_normal}}" background-size="cover"></image>
+	    </view>
+	    <view class="topic-right-info">
+	      <view class="topic-title">{{topicDetail.title}}</view>
+	      <view class="topic-owner">{{topicDetail.member.username}}</view>
+	    </view>
+	</view>
+    <view class="topic-content">
+      <view class="topic-inner-content">{{topicDetail.content}}</view>
+    </view>
+    <view class="topic-extra-info">
+      <view class="topic-replies">回复：{{topicDetail.replies}}</view>
+    </view>
+  </view>
+</view>

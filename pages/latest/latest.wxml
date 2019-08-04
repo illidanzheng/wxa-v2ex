@@ -1,0 +1,22 @@
+<!--pages/latest/latest.wxml-->
+<view class="container">
+  <view class="topic-main">
+    <block wx:for="{{latest}}">
+      <view class="topic-item" index="{{index}}" data-id="{{item.id}}" catchtap="redirectDetail">
+        <image class="member-avatar" src="{{item.member.avatar_normal}}" background-size="cover"></image>
+        <view class="topic-info">
+          <view class="topic-inner">
+            <view class="topic-left">
+              <view class="topic-title"><text>{{item.title}}</text></view>
+              <view>
+                <text class="node-name">{{item.node.name}}</text>
+                <text class="member-nickname">{{item.member.username}}</text>
+                <text class="reply-num">{{item.replies}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
