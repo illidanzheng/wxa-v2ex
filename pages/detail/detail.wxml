@@ -17,4 +17,18 @@
       <view class="topic-replies">回复：{{topicDetail.replies}}</view>
     </view>
   </view>
+  <view class="replies">
+  	<block wx:for="{{replies}}">
+  		<view class="replies-item" id="{{item.id}}">
+  			<view class="reply-owner">
+  				<image class="reply-owner-avatar" src="{{item.member.avatar_normal}}"></image>
+  				<text class="reply-name">{{item.member.username}}</text>
+  				<text class="reply-time">{{item.created}}</text>
+  			</view>
+  			<view class="replay-content">
+  				<text>{{item.content}}</text>
+  			</view>
+  		</view>
+  	</block>
+  </view>
 </view>

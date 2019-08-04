@@ -5,7 +5,8 @@ Page({
    * Page initial data
    */
   data: {
-    topicDetail: {}
+    topicDetail: {},
+    replies: []
   },
 
   /**
@@ -21,6 +22,7 @@ Page({
     wx.request({
       url: topicDetailUrl,
       method: "GET",
+      
       success(res) {
         console.log(res);
 
@@ -28,6 +30,21 @@ Page({
           topicDetail: res.data[0]
         })
       }
-    })
+    });
+
+    var topicRelyUrl = "http://www.v2ex.com/api/replies/show.json?topic_id=" + options.id;
+
+    wx.request({
+      url: topicRelyUrl,
+      method: "GET",
+      
+      success(res) {
+        console.log(res);
+
+        that.setData({
+          replies: res.data
+        });
+      }
+    });
   },
 })

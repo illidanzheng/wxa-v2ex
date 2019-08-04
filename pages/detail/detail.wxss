@@ -55,3 +55,45 @@
   border-radius: 5rpx;
   color: #777;
 }
+
+/*replies*/
+.replies {
+    margin-top:30rpx;
+    border-top:1px solid #ddd;
+}
+
+.replies-item {
+    padding:40rpx 0;
+    border-bottom:1px solid #eee;
+}
+
+.reply-owner {
+    /*display: flex;*/
+    align-items: center;
+    margin-bottom: 40rpx;
+}
+
+.reply-owner-avatar {
+    width:100rpx;
+    height:100rpx;
+    border-radius:100%;
+    margin-right:30rpx;
+}
+
+.reply-name, .reply-time, .reply-content {
+    font-size:14px;
+    color:#999;
+}
+
+.reply-time {
+    margin-left: 30rpx;
+    color:#ccc;
+}
+
+.reply-content {
+    padding:0 20rpx;
+    line-height:1.4;
+    word-wrap: break-word; 
+    word-break: normal; 
+    color:#999;
+}
